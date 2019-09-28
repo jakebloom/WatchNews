@@ -9,9 +9,10 @@
         <!--Hosting Controller-->
         <scene sceneID="RUd-og-cv4">
             <objects>
-                <hostingController id="NBu-mt-KyX" customClass="HostingController" customModule="WatchYaself_WatchKit_App" customModuleProvider="target"/>
+                <hostingController id="NBu-mt-KyX" customClass="HostingController" customModule="AussieNews_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="187" y="141"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.80392156862745101" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

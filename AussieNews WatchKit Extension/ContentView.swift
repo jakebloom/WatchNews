@@ -12,8 +12,21 @@ struct ContentView: View {
     @ObservedObject var model: NewsModel
     
     var body: some View {
+        switch model.state {
+        case .SUCCESS:
+            return AnyView(self.successView())
+        case .LOADING:
+            return AnyView(Text("Loading..."))
+        case .FAILURE:
+            fallthrough
+        default:
+            return AnyView(Text("Unable to fetch headlines"))
+        }
+    }
+    
+    func successView() -> some View {
         List {
-            ForEach(model.headlines) { headline in
+            ForEach(self.model.headlines) { headline in
                 NavigationLink(destination: StoryView(story: headline.mainText)) {
                     Text(headline.titleText).font(.footnote).padding()
                 }
